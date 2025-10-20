@@ -1,0 +1,129 @@
+@keyframes popTxt {
+  from{
+    opacity: 0;
+    transform: translate(-30px , 30px) scale(0.5);
+  }
+  to{
+    opacity: 1;
+    transform: translate(0) scale(1);
+  }
+}
+
+@keyframes popSite{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1
+  }
+}
+
+
+.cu{
+  cursor: pointer;
+}
+
+*{
+  box-sizing : border-box;
+  margin :0;
+  padding : 0;
+  cursor: url("../IMG/batman-logo-png_seeklogo-237483_2.png") 16 16,  auto;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+header{
+  opacity: 0;
+  position: fixed;
+  z-index: 10; 
+  width: 100%;
+  top: 0;
+  animation: popSite 0.5s ease-out 1.2s forwards;
+}
+
+body{
+  color: #fff;
+  font-family: "new-hero",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+#bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "new-hero", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.header__menu{
+  position: absolute;
+  z-index: 11;
+  top: 50px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 25px;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  list-style: none;
+  font-size: 20px;
+  padding: 0px 20px;
+  transition: all 0.3s ease-out;
+}
+
+.header__img{
+  position: absolute;
+  top:20px;
+  left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 125px;
+  height: 125px;
+  overflow: hidden;
+  border-radius: 100%;
+  transition: all 0.3s ease-out;
+}
+.header__img img{
+  width: 100%;
+  height: auto;
+}
+
+.header__menu li{
+  padding: 15px 0px;
+}
+
+.lien{
+  display: inline-block;
+  color: rgba(240, 240, 240, 0.8);
+  text-decoration: none;
+  transition : color 0.2s ease-out , transform 0.2s ease-out;
+}
+
+
+
+.txtAppearName{
+  animation: popTxt 0.8s ease-out 0.2s forwards;
+}
+.txtAppearJob{
+  animation: popTxt 0.8s ease-out 0.4s forwards;
+}
